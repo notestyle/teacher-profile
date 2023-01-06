@@ -16,7 +16,7 @@ export default function Home() {
       },
       {
         icon: "fb",
-        url: "www.facebook.com/uguumuro",
+        url: "https://www.facebook.com/uguumuro",
       },
     ],
   };
