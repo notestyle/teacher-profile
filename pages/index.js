@@ -296,7 +296,7 @@ export default function Home() {
           {students.map((row, i) => (
             <div
               key={i}
-              className="w-full translate-x-0 duration-500 ease-in-out transition-all border border-gray-200 h-54 hover:shadow-cyan-400 bg-slate-100 rounded-md shadow-md flex flex-col items-center py-4"
+              className="w-full border border-gray-200 h-54 hover:shadow-cyan-400 bg-slate-100 rounded-md shadow-md flex flex-col items-center py-4"
             >
               <div className="w-24 h-24 rounded-full bg-neutral-800"></div>
               <div className="font-bold">{row.fullname}</div>
