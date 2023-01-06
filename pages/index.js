@@ -263,8 +263,9 @@ export default function Home() {
           <div className="font-bold">Багш</div>
           <div className="text-sm text-gray-600">{profile.title}</div>
           <div className="flex gap-2 mt-8">
-            {profile.urls.map((row) => (
+            {profile.urls.map((row, i) => (
               <a
+                key={i}
                 href={row.url}
                 className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center"
               >
@@ -292,14 +293,18 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full px-4 grid grid-cols-2 md:grid-cols-4 gap-2">
-          {students.map((row) => (
-            <div className="w-full translate-x-0 duration-500 ease-in-out transition-all border border-gray-200 h-54 hover:shadow-cyan-400 bg-slate-100 rounded-md shadow-md flex flex-col items-center py-4">
+          {students.map((row, i) => (
+            <div
+              key={i}
+              className="w-full translate-x-0 duration-500 ease-in-out transition-all border border-gray-200 h-54 hover:shadow-cyan-400 bg-slate-100 rounded-md shadow-md flex flex-col items-center py-4"
+            >
               <div className="w-24 h-24 rounded-full bg-neutral-800"></div>
               <div className="font-bold">{row.fullname}</div>
               <div className="text-sm text-gray-600">{row.title}</div>
               <div className="flex gap-2 mt-8">
-                {row.urls.map((link) => (
+                {row.urls.map((link, j) => (
                   <a
+                    key={j}
                     href={link.url}
                     className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center"
                   >
