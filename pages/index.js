@@ -85,6 +85,16 @@ export default function Home() {
         </div>
         {/* Сурагчид */}
         <div className="font-bold text-gray-700">A-Z амжилттай төгссөн</div>
+        <div className=" w-[80%] flex flex-col items-center">
+          <div className="w-1 h-8 bg-gray-500 rounded-t"></div>
+          <div className="bg-gray-500 h-1 w-full rounded-t"></div>
+          <div className="flex justify-between w-full">
+            <div className="bg-gray-500 h-8 w-1 rounded-b"></div>
+            <div className="bg-gray-500 h-8 w-1 rounded-b"></div>
+            <div className="bg-gray-500 h-8 w-1 rounded-b"></div>
+            <div className="bg-gray-500 h-8 w-1 rounded-b"></div>
+          </div>
+        </div>
         <div className="w-full px-4 grid grid-cols-4 gap-2">
           <div className="w-full h-54 bg-slate-100 rounded-md shadow-lg flex flex-col items-center py-4">
             <div className="w-24 h-24 rounded-full bg-neutral-800"></div>
