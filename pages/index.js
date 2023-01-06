@@ -111,11 +111,11 @@ export default function Home() {
         },
         {
           icon: "email",
-          url: "mailto:",
+          url: "mailto:unurmaa.s@mta.gov.mn",
         },
         {
           icon: "phone",
-          url: "tel:",
+          url: "tel:94707770",
         },
       ],
     },
@@ -151,15 +151,15 @@ export default function Home() {
         },
         {
           icon: "fb",
-          url: "www.facebook.com",
+          url: "https://www.facebook.com/urnaa31",
         },
         {
           icon: "email",
-          url: "mailto:",
+          url: "mailto:uranchimeg.ya@mta.gov.mn",
         },
         {
           icon: "phone",
-          url: "tel:",
+          url: "tel:86051551",
         },
       ],
     },
