@@ -292,7 +292,7 @@ export default function Home() {
             <div className="bg-gray-200 h-8 w-1 rounded-b hidden md:block border-b border-x border-neutral-400"></div>
           </div>
         </div>
-        <div className="w-full px-4 grid grid-cols-2 md:grid-cols-4 gap-2">
+        <div className="w-full px-4 grid grid-cols-2 md:grid-cols-4 gap-2 mb-12">
           {students.map((row, i) => (
             <div
               key={i}
@@ -314,6 +314,9 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="h-8 bg-neutral-800 text-slate-100 w-full flex items-center justify-center text-xs">
+          2023 он
         </div>
       </div>
     </>
