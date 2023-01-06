@@ -275,12 +275,12 @@ export default function Home() {
           </div>
         </div>
         {/* Сурагчид */}
-        <div className=" font-bold text-gray-700 gap-2 flex items-center justify-center">
+        <div className="mt-12 font-bold text-gray-700 gap-2 flex items-center justify-center">
           <span className="border-gray-700 rounded border p-1">Next.js</span>+
           <span className="border-cyan-500 text-cyan-500 rounded border p-1">
             Tailwindcss
           </span>
-          <span>амжилттай төгссөн</span>
+          <span>сургалтыг амжилттай төгссөн</span>
         </div>
         <div className=" w-[80%] flex flex-col items-center">
           <div className="w-1 h-8 bg-gray-200 rounded-t border-t border-l border-neutral-400"></div>
