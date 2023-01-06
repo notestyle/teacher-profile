@@ -23,9 +23,10 @@ export default function Home() {
             <div>Холбоо барих</div>
           </div>
         </div>
-        <div className="w-80 h-60 bg-slate-100 rounded-md shadow-lg flex flex-col items-center py-4">
+        <div className="w-80 h-72 bg-slate-100 rounded-md shadow-lg flex flex-col items-center py-4">
           <div className="w-24 h-24 rounded-full bg-neutral-800"></div>
           <div className="font-bold">О.Өгөөмөр</div>
+          <div className="font-bold">Багш</div>
           <div className="text-sm text-gray-600">Fullstack enginner</div>
           <div className="flex gap-2 mt-8">
             <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
