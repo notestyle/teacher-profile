@@ -1,9 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -14,9 +9,378 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="dark:bg-gray-800 bg-slate-100 h-screen w-screen flex justify-center items-center">
-        <div className="w-80 h-60 bg-slate-100 rounded-md shadow-lg">
-          Uguumur
+
+      <div className="dark:bg-gray-800 relative bg-slate-100 h-full flex flex-col gap-4 justify-start items-center">
+        <div className="w-full sticky bg-opacity-40 backdrop-blur-lg drop-shadow-md top-0 h-20 shadow flex justify-between items-center px-4">
+          <div className="h-12 w-12 rounded-full bg-neutral-800 flex justify-center items-center">
+            <div className="font-extrabold text-slate-100 text-3xl">U</div>
+          </div>
+          <div className="flex items-center gap-8 text-sm">
+            <div className="bg-neutral-800 cursor-pointer hover:bg-slate-700 text-white rounded px-2 py-1">
+              Нүүр
+            </div>
+            <div>Туршлага</div>
+            <div>Холбоо барих</div>
+          </div>
+        </div>
+        <div className="w-80 h-60 bg-slate-100 rounded-md shadow-lg flex flex-col items-center py-4">
+          <div className="w-24 h-24 rounded-full bg-neutral-800"></div>
+          <div className="font-bold">О.Өгөөмөр</div>
+          <div className="text-sm text-gray-600">Fullstack enginner</div>
+          <div className="flex gap-2 mt-8">
+            <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-6 h-6"
+              >
+                <path d="M10.5 18.75a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" />
+                <path
+                  fillRule="evenodd"
+                  d="M8.625.75A3.375 3.375 0 005.25 4.125v15.75a3.375 3.375 0 003.375 3.375h6.75a3.375 3.375 0 003.375-3.375V4.125A3.375 3.375 0 0015.375.75h-6.75zM7.5 4.125C7.5 3.504 8.004 3 8.625 3H9.75v.375c0 .621.504 1.125 1.125 1.125h2.25c.621 0 1.125-.504 1.125-1.125V3h1.125c.621 0 1.125.504 1.125 1.125v15.75c0 .621-.504 1.125-1.125 1.125h-6.75A1.125 1.125 0 017.5 19.875V4.125z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+            <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+              <svg
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 h-6"
+              >
+                <rect x="0" fill="none" width="20" height="20" />
+                <g>
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M2.5 18h3V6.9h-3V18zM4 2c-1 0-1.8.8-1.8 1.8S3 5.6 4 5.6s1.8-.8 1.8-1.8S5 2 4 2zm6.6 6.6V6.9h-3V18h3v-5.7c0-3.2 4.1-3.4 4.1 0V18h3v-6.8c0-5.4-5.7-5.2-7.1-2.6z"
+                  />
+                </g>
+              </svg>
+            </div>
+            <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                className="w-6 h-6"
+              >
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg>
+            </div>
+            <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+              <svg
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                data-name="Flat Color"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 h-6"
+              >
+                <path d="M14,6h3a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1H14A5,5,0,0,0,9,7v3H7a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1H9v7a1,1,0,0,0,1,1h2a1,1,0,0,0,1-1V14h2.22a1,1,0,0,0,1-.76l.5-2a1,1,0,0,0-1-1.24H13V7A1,1,0,0,1,14,6Z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        {/* Сурагчид */}
+        <div className="font-bold text-gray-700">A-Z амжилттай төгссөн</div>
+        <div className="w-full px-4 grid grid-cols-4 gap-2">
+          <div className="w-full h-54 bg-slate-100 rounded-md shadow-lg flex flex-col items-center py-4">
+            <div className="w-24 h-24 rounded-full bg-neutral-800"></div>
+            <div className="font-bold">Б.Тэмүүлэн</div>
+            <div className="text-sm text-gray-600">Database Engineer</div>
+            <div className="flex gap-2 mt-8">
+              <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM6.262 6.072a8.25 8.25 0 1010.562-.766 4.5 4.5 0 01-1.318 1.357L14.25 7.5l.165.33a.809.809 0 01-1.086 1.085l-.604-.302a1.125 1.125 0 00-1.298.21l-.132.131c-.439.44-.439 1.152 0 1.591l.296.296c.256.257.622.374.98.314l1.17-.195c.323-.054.654.036.905.245l1.33 1.108c.32.267.46.694.358 1.1a8.7 8.7 0 01-2.288 4.04l-.723.724a1.125 1.125 0 01-1.298.21l-.153-.076a1.125 1.125 0 01-.622-1.006v-1.089c0-.298-.119-.585-.33-.796l-1.347-1.347a1.125 1.125 0 01-.21-1.298L9.75 12l-1.64-1.64a6 6 0 01-1.676-3.257l-.172-1.03z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+                <svg
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
+                >
+                  <rect x="0" fill="none" width="20" height="20" />
+                  <g>
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M2.5 18h3V6.9h-3V18zM4 2c-1 0-1.8.8-1.8 1.8S3 5.6 4 5.6s1.8-.8 1.8-1.8S5 2 4 2zm6.6 6.6V6.9h-3V18h3v-5.7c0-3.2 4.1-3.4 4.1 0V18h3v-6.8c0-5.4-5.7-5.2-7.1-2.6z"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  className="w-6 h-6"
+                >
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+              </div>
+              <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+                <svg
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  data-name="Flat Color"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
+                >
+                  <path d="M14,6h3a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1H14A5,5,0,0,0,9,7v3H7a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1H9v7a1,1,0,0,0,1,1h2a1,1,0,0,0,1-1V14h2.22a1,1,0,0,0,1-.76l.5-2a1,1,0,0,0-1-1.24H13V7A1,1,0,0,1,14,6Z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div className="w-full h-54 bg-slate-100 rounded-md shadow-lg flex flex-col items-center py-4">
+            <div className="w-24 h-24 rounded-full bg-neutral-800"></div>
+            <div className="font-bold">С.Өнөрмаа</div>
+            <div className="text-sm text-gray-600">Software Developer</div>
+            <div className="flex gap-2 mt-8">
+              <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM6.262 6.072a8.25 8.25 0 1010.562-.766 4.5 4.5 0 01-1.318 1.357L14.25 7.5l.165.33a.809.809 0 01-1.086 1.085l-.604-.302a1.125 1.125 0 00-1.298.21l-.132.131c-.439.44-.439 1.152 0 1.591l.296.296c.256.257.622.374.98.314l1.17-.195c.323-.054.654.036.905.245l1.33 1.108c.32.267.46.694.358 1.1a8.7 8.7 0 01-2.288 4.04l-.723.724a1.125 1.125 0 01-1.298.21l-.153-.076a1.125 1.125 0 01-.622-1.006v-1.089c0-.298-.119-.585-.33-.796l-1.347-1.347a1.125 1.125 0 01-.21-1.298L9.75 12l-1.64-1.64a6 6 0 01-1.676-3.257l-.172-1.03z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+                <svg
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
+                >
+                  <rect x="0" fill="none" width="20" height="20" />
+                  <g>
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M2.5 18h3V6.9h-3V18zM4 2c-1 0-1.8.8-1.8 1.8S3 5.6 4 5.6s1.8-.8 1.8-1.8S5 2 4 2zm6.6 6.6V6.9h-3V18h3v-5.7c0-3.2 4.1-3.4 4.1 0V18h3v-6.8c0-5.4-5.7-5.2-7.1-2.6z"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  className="w-6 h-6"
+                >
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+              </div>
+              <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+                <svg
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  data-name="Flat Color"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
+                >
+                  <path d="M14,6h3a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1H14A5,5,0,0,0,9,7v3H7a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1H9v7a1,1,0,0,0,1,1h2a1,1,0,0,0,1-1V14h2.22a1,1,0,0,0,1-.76l.5-2a1,1,0,0,0-1-1.24H13V7A1,1,0,0,1,14,6Z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div className="w-full h-54 bg-slate-100 rounded-md shadow-lg flex flex-col items-center py-4">
+            <div className="w-24 h-24 rounded-full bg-neutral-800"></div>
+            <div className="font-bold">Т.Ганхөлөг</div>
+            <div className="text-sm text-gray-600">Database Engineer</div>
+            <div className="flex gap-2 mt-8">
+              <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM6.262 6.072a8.25 8.25 0 1010.562-.766 4.5 4.5 0 01-1.318 1.357L14.25 7.5l.165.33a.809.809 0 01-1.086 1.085l-.604-.302a1.125 1.125 0 00-1.298.21l-.132.131c-.439.44-.439 1.152 0 1.591l.296.296c.256.257.622.374.98.314l1.17-.195c.323-.054.654.036.905.245l1.33 1.108c.32.267.46.694.358 1.1a8.7 8.7 0 01-2.288 4.04l-.723.724a1.125 1.125 0 01-1.298.21l-.153-.076a1.125 1.125 0 01-.622-1.006v-1.089c0-.298-.119-.585-.33-.796l-1.347-1.347a1.125 1.125 0 01-.21-1.298L9.75 12l-1.64-1.64a6 6 0 01-1.676-3.257l-.172-1.03z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+                <svg
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
+                >
+                  <rect x="0" fill="none" width="20" height="20" />
+                  <g>
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M2.5 18h3V6.9h-3V18zM4 2c-1 0-1.8.8-1.8 1.8S3 5.6 4 5.6s1.8-.8 1.8-1.8S5 2 4 2zm6.6 6.6V6.9h-3V18h3v-5.7c0-3.2 4.1-3.4 4.1 0V18h3v-6.8c0-5.4-5.7-5.2-7.1-2.6z"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  className="w-6 h-6"
+                >
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+              </div>
+              <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+                <svg
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  data-name="Flat Color"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
+                >
+                  <path d="M14,6h3a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1H14A5,5,0,0,0,9,7v3H7a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1H9v7a1,1,0,0,0,1,1h2a1,1,0,0,0,1-1V14h2.22a1,1,0,0,0,1-.76l.5-2a1,1,0,0,0-1-1.24H13V7A1,1,0,0,1,14,6Z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div className="w-full h-54 bg-slate-100 rounded-md shadow-lg flex flex-col items-center py-4">
+            <div className="w-24 h-24 rounded-full bg-neutral-800"></div>
+            <div className="font-bold">Я.Уранчимэг</div>
+            <div className="text-sm text-gray-600">Software Developer</div>
+            <div className="flex gap-2 mt-8">
+              <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM6.262 6.072a8.25 8.25 0 1010.562-.766 4.5 4.5 0 01-1.318 1.357L14.25 7.5l.165.33a.809.809 0 01-1.086 1.085l-.604-.302a1.125 1.125 0 00-1.298.21l-.132.131c-.439.44-.439 1.152 0 1.591l.296.296c.256.257.622.374.98.314l1.17-.195c.323-.054.654.036.905.245l1.33 1.108c.32.267.46.694.358 1.1a8.7 8.7 0 01-2.288 4.04l-.723.724a1.125 1.125 0 01-1.298.21l-.153-.076a1.125 1.125 0 01-.622-1.006v-1.089c0-.298-.119-.585-.33-.796l-1.347-1.347a1.125 1.125 0 01-.21-1.298L9.75 12l-1.64-1.64a6 6 0 01-1.676-3.257l-.172-1.03z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+                <svg
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
+                >
+                  <rect x="0" fill="none" width="20" height="20" />
+                  <g>
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M2.5 18h3V6.9h-3V18zM4 2c-1 0-1.8.8-1.8 1.8S3 5.6 4 5.6s1.8-.8 1.8-1.8S5 2 4 2zm6.6 6.6V6.9h-3V18h3v-5.7c0-3.2 4.1-3.4 4.1 0V18h3v-6.8c0-5.4-5.7-5.2-7.1-2.6z"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  className="w-6 h-6"
+                >
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+              </div>
+              <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+                <svg
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  data-name="Flat Color"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
+                >
+                  <path d="M14,6h3a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1H14A5,5,0,0,0,9,7v3H7a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1H9v7a1,1,0,0,0,1,1h2a1,1,0,0,0,1-1V14h2.22a1,1,0,0,0,1-.76l.5-2a1,1,0,0,0-1-1.24H13V7A1,1,0,0,1,14,6Z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div className="w-full h-54 bg-slate-100 rounded-md shadow-lg flex flex-col items-center py-4">
+            <div className="w-24 h-24 rounded-full bg-neutral-800"></div>
+            <div className="font-bold">У.Ганзориг</div>
+            <div className="text-sm text-gray-600">Software Developer</div>
+            <div className="flex gap-2 mt-8">
+              <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM6.262 6.072a8.25 8.25 0 1010.562-.766 4.5 4.5 0 01-1.318 1.357L14.25 7.5l.165.33a.809.809 0 01-1.086 1.085l-.604-.302a1.125 1.125 0 00-1.298.21l-.132.131c-.439.44-.439 1.152 0 1.591l.296.296c.256.257.622.374.98.314l1.17-.195c.323-.054.654.036.905.245l1.33 1.108c.32.267.46.694.358 1.1a8.7 8.7 0 01-2.288 4.04l-.723.724a1.125 1.125 0 01-1.298.21l-.153-.076a1.125 1.125 0 01-.622-1.006v-1.089c0-.298-.119-.585-.33-.796l-1.347-1.347a1.125 1.125 0 01-.21-1.298L9.75 12l-1.64-1.64a6 6 0 01-1.676-3.257l-.172-1.03z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+                <svg
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
+                >
+                  <rect x="0" fill="none" width="20" height="20" />
+                  <g>
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M2.5 18h3V6.9h-3V18zM4 2c-1 0-1.8.8-1.8 1.8S3 5.6 4 5.6s1.8-.8 1.8-1.8S5 2 4 2zm6.6 6.6V6.9h-3V18h3v-5.7c0-3.2 4.1-3.4 4.1 0V18h3v-6.8c0-5.4-5.7-5.2-7.1-2.6z"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  className="w-6 h-6"
+                >
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+              </div>
+              <div className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center">
+                <svg
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  data-name="Flat Color"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
+                >
+                  <path d="M14,6h3a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1H14A5,5,0,0,0,9,7v3H7a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1H9v7a1,1,0,0,0,1,1h2a1,1,0,0,0,1-1V14h2.22a1,1,0,0,0,1-.76l.5-2a1,1,0,0,0-1-1.24H13V7A1,1,0,0,1,14,6Z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
