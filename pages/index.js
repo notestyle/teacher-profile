@@ -173,15 +173,15 @@ export default function Home() {
         },
         {
           icon: "fb",
-          url: "www.facebook.com",
+          url: "www.facebook.com/ganzorig.u",
         },
         {
           icon: "email",
-          url: "mailto:",
+          url: "mailto:ganzorig.uuganbayariin0321@gmail.com",
         },
         {
           icon: "phone",
-          url: "tel:",
+          url: "tel:80560321",
         },
       ],
     },
