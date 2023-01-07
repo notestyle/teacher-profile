@@ -240,34 +240,39 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="dark:bg-gray-800 relative bg-slate-100 h-full flex flex-col gap-4 justify-start items-center">
+      <div className="dark:bg-gray-800 relative bg-slate-100 h-full flex flex-col gap-4 justify-start items-center dark:text-slate-100">
         <div className="w-full sticky bg-opacity-40 backdrop-blur-lg drop-shadow-md top-0 h-20 shadow flex justify-between items-center px-4">
-          <button className="h-12 w-12 rounded-full bg-neutral-800 flex justify-center items-center">
-            <div className="font-extrabold text-slate-100 text-3xl">U</div>
+          <button className="h-12 w-12 rounded-full bg-neutral-800 dark:bg-slate-200 flex justify-center items-center">
+            <div className="font-extrabold text-slate-100 dark:text-slate-400  text-3xl">
+              U
+            </div>
           </button>
           <div className="flex items-center gap-8 text-sm">
-            <button className="bg-neutral-800 cursor-pointer hover:bg-slate-700 text-white rounded px-2 py-1">
+            <button className="bg-neutral-800 dark:bg-cyan-400 cursor-pointer hover:bg-slate-700 text-white rounded px-2 py-1">
               Нүүр
             </button>
             <button>Сургалт</button>
           </div>
         </div>
-        <div className="w-80 h-72 border border-gray-200 bg-slate-100 hover:shadow-cyan-400 rounded-md shadow-lg flex flex-col items-center py-4">
+        <div className="w-80 h-72 border border-gray-200 dark:border-cyan-400 bg-slate-100 hover:shadow-cyan-400 dark:shadow-cyan-400 dark:bg-gray-800 rounded-md shadow-lg flex flex-col items-center py-4">
           <div className="w-28 h-28 rounded-full shadow border flex items-center justify-center">
             <img
               className="w-24 h-24 rounded-full object-cover"
               src="uguumur.png"
+              alt="profile"
             />
           </div>
           <div className="font-bold">{profile.fullname}</div>
           <div className="font-bold">Багш</div>
-          <div className="text-sm text-gray-600">{profile.title}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-400">
+            {profile.title}
+          </div>
           <div className="flex gap-2 mt-8">
             {profile.urls.map((row, i) => (
               <a
                 key={i}
                 href={row.url}
-                className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center"
+                className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center dark:text-cyan-400 dark:border dark:border-cyan-400"
               >
                 {icons[row.icon]}
               </a>
@@ -275,38 +280,45 @@ export default function Home() {
           </div>
         </div>
         {/* Сурагчид */}
-        <div className="mt-12 font-bold text-gray-700 gap-2 flex items-center justify-center">
-          <span className="border-gray-700 rounded border p-1">Next.js</span>+
-          <span className="border-cyan-500 text-cyan-500 rounded border p-1">
-            Tailwindcss
-          </span>
+        <div className="mt-12 font-bold text-gray-700 gap-2 flex items-center justify-center flex-col md:flex-row dark:text-gray-300">
+          <div className="flex gap-2 justify-center items-center ">
+            <span className="border-gray-700 rounded border p-1 dark:bg-gray-200 dark:text-gray-800  dark:border-gray-300">
+              Next.js
+            </span>
+            +
+            <span className="border-cyan-500 text-cyan-500 rounded border p-1">
+              Tailwindcss
+            </span>
+          </div>
           <span>сургалтыг амжилттай төгссөн</span>
         </div>
         <div className=" w-[80%] flex flex-col items-center">
-          <div className="w-1 h-8 bg-gray-200 rounded-t border-t border-l border-neutral-400"></div>
-          <div className="bg-gray-200 border-l border-neutral-400 h-1 w-full rounded-t"></div>
+          <div className="w-1 h-8 bg-gray-200 rounded-t border-t border-l border-neutral-400 dark:bg-cyan-400"></div>
+          <div className="bg-gray-200 border-l border-neutral-400 h-1 w-full rounded-t dark:bg-cyan-400"></div>
           <div className="flex justify-between w-full">
-            <div className="bg-gray-200 h-8 w-1 rounded-b  border-l border-neutral-400"></div>
-            <div className="bg-gray-200 h-8 w-1 rounded-b  border-l border-neutral-400"></div>
-            <div className="bg-gray-200 h-8 w-1 rounded-b hidden md:block border-b border-x border-neutral-400"></div>
-            <div className="bg-gray-200 h-8 w-1 rounded-b hidden md:block border-b border-x border-neutral-400"></div>
+            <div className="bg-gray-200 h-8 w-1 rounded-b  border-l border-neutral-400 dark:bg-cyan-400"></div>
+            <div className="bg-gray-200 h-8 w-1 rounded-b  border-l border-neutral-400 dark:bg-cyan-400"></div>
+            <div className="bg-gray-200 h-8 w-1 rounded-b hidden md:block border-b border-l border-neutral-400 dark:bg-cyan-400"></div>
+            <div className="bg-gray-200 h-8 w-1 rounded-b hidden md:block border-b border-l border-neutral-400 dark:bg-cyan-400"></div>
           </div>
         </div>
         <div className="w-full px-4 grid grid-cols-2 md:grid-cols-4 gap-2 mb-12">
           {students.map((row, i) => (
             <div
               key={i}
-              className="w-full border border-gray-200 h-54 hover:shadow-cyan-400 bg-slate-100 rounded-md shadow-md flex flex-col items-center py-4"
+              className="w-full border border-gray-200 dark:border-cyan-400 h-54 hover:shadow-cyan-400 bg-slate-100 dark:bg-gray-700 rounded-md shadow-md flex flex-col items-center py-4"
             >
               <div className="w-24 h-24 rounded-full bg-neutral-800"></div>
               <div className="font-bold">{row.fullname}</div>
-              <div className="text-sm text-gray-600">{row.title}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                {row.title}
+              </div>
               <div className="flex gap-2 mt-8">
                 {row.urls.map((link, j) => (
                   <a
                     key={j}
                     href={link.url}
-                    className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center"
+                    className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center dark:text-cyan-400 dark:border dark:border-cyan-400"
                   >
                     {icons[link.icon]}
                   </a>
@@ -315,7 +327,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="h-8 bg-neutral-800 text-slate-100 w-full flex items-center justify-center text-xs">
+        <div className="h-8 bg-neutral-800 dark:bg-gray-700 text-slate-100 w-full flex items-center justify-center text-xs">
           2023 он
         </div>
       </div>
