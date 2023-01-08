@@ -306,7 +306,7 @@ export default function Home() {
           </div>
         </div>
         <div className="w-80 h-72 border border-gray-200 dark:border-cyan-400 bg-slate-100 hover:shadow-cyan-400 dark:shadow-cyan-400 dark:bg-gray-800 rounded-md shadow-lg flex flex-col items-center py-4">
-          <div className="w-28 h-28 rounded-full shadow border flex items-center justify-center">
+          <div className="w-28 h-28 rounded-full shadow border dark:border-cyan-400 flex items-center justify-center">
             <img
               className="w-24 h-24 rounded-full object-cover"
               src="uguumur.png"
@@ -359,7 +359,32 @@ export default function Home() {
               key={i}
               className="w-full border border-gray-200 dark:border-cyan-400 h-54 hover:shadow-cyan-400 bg-slate-100 dark:bg-gray-700 rounded-md shadow-md flex flex-col items-center py-4"
             >
-              <div className="w-24 h-24 rounded-full bg-neutral-800"></div>
+              <div className="w-28 h-28 rounded-full shadow border dark:border-cyan-400 flex items-center justify-center">
+                {row.img ? (
+                  <>
+                    <img
+                      className="w-24 h-24 rounded-full object-cover bg-neutral-800 flex justify-center items-center text-sx"
+                      src=""
+                      alt="]"
+                    />
+                  </>
+                ) : (
+                  <div className="bg-slate-200 dark:bg-neutral-800 h-24 w-24 rounded-full flex justify-center items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-20 h-20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                )}
+              </div>
               <div className="font-bold">{row.fullname}</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">
                 {row.title}
