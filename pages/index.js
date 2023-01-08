@@ -305,7 +305,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="w-80 h-72 border border-gray-200 dark:border-cyan-400 bg-slate-100 hover:shadow-cyan-400 dark:shadow-cyan-400 dark:bg-gray-800 rounded-md shadow-lg flex flex-col items-center py-4">
+        <div className="w-80 border border-gray-200 dark:border-cyan-400 bg-slate-100 hover:shadow-cyan-400 dark:shadow-cyan-400 dark:bg-gray-800 rounded-md shadow-lg flex flex-col items-center py-8">
           <div className="w-28 h-28 rounded-full shadow border dark:border-cyan-400 flex items-center justify-center">
             <img
               className="w-24 h-24 rounded-full object-cover"
@@ -313,7 +313,7 @@ export default function Home() {
               alt="profile"
             />
           </div>
-          <div className="font-bold">{profile.fullname}</div>
+          <div className="font-bold mt-4">{profile.fullname}</div>
           <div className="font-bold">Багш</div>
           <div className="text-sm text-gray-600 dark:text-gray-400">
             {profile.title}
@@ -353,11 +353,11 @@ export default function Home() {
             <div className="bg-gray-200 h-8 w-1 rounded-b hidden md:block border-b border-l border-neutral-400 dark:bg-cyan-400"></div>
           </div>
         </div>
-        <div className="w-full px-4 grid grid-cols-2 md:grid-cols-4 gap-2 mb-12">
+        <div className="w-full px-4 grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           {students.map((row, i) => (
             <div
               key={i}
-              className="w-full border border-gray-200 dark:border-cyan-400 h-54 hover:shadow-cyan-400 bg-slate-100 dark:bg-gray-700 rounded-md shadow-md flex flex-col items-center py-4"
+              className="w-full border border-gray-200 dark:border-cyan-400 h-54 hover:shadow-cyan-400 bg-slate-100 dark:bg-gray-700 rounded-md shadow-lg flex flex-col items-center py-8"
             >
               <div className="w-28 h-28 rounded-full shadow border dark:border-cyan-400 flex items-center justify-center">
                 {row.img ? (
@@ -385,8 +385,8 @@ export default function Home() {
                   </div>
                 )}
               </div>
-              <div className="font-bold">{row.fullname}</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">
+              <div className="font-bold mt-4">{row.fullname}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400 ">
                 {row.title}
               </div>
               <div className="flex gap-2 mt-8">
