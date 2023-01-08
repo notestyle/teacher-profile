@@ -357,7 +357,7 @@ export default function Home() {
           {students.map((row, i) => (
             <div
               key={i}
-              className="w-full border border-gray-200 dark:border-cyan-400 h-54 hover:shadow-cyan-400 bg-slate-100 dark:bg-gray-700 rounded-md shadow-lg flex flex-col items-center py-8"
+              className="w-full border border-gray-200 dark:border-cyan-400 h-54 hover:shadow-cyan-400 bg-slate-100 dark:bg-gray-800 rounded-md shadow-lg flex flex-col items-center py-8"
             >
               <div className="w-28 h-28 rounded-full shadow border dark:border-cyan-400 flex items-center justify-center">
                 {row.img ? (
