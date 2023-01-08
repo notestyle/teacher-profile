@@ -278,7 +278,7 @@ export default function Home() {
             <button
               onClick={() => {
                 localStorage.theme =
-                  localStorage.theme == "light" ? "dark" : "light";
+                  localStorage.theme == "dark" ? "light" : "dark";
                 updateTheme();
               }}
             >
