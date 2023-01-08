@@ -266,7 +266,7 @@ export default function Home() {
       </Head>
 
       <div className="dark:bg-gray-800 relative bg-slate-100 h-full flex flex-col gap-4 justify-start items-center dark:text-slate-100">
-        <div className="w-full sticky bg-opacity-40 backdrop-blur-lg drop-shadow-md top-0 h-20 shadow flex justify-between items-center px-4">
+        <div className="w-full sticky bg-opacity-40  backdrop-blur-lg drop-shadow dark:border-b dark:border-cyan-400 top-0 h-20 shadow flex justify-between items-center px-4">
           <button className="h-12 w-12 rounded-full bg-neutral-800 dark:bg-cyan-400 flex justify-center items-center">
             <div className="font-extrabold text-slate-100 text-3xl">U</div>
           </button>
