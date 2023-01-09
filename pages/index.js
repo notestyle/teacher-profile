@@ -180,6 +180,16 @@ export default function Home() {
       ],
     },
     {
+      fullname: "Ц.Бат-Эрдэнэ",
+      title: "Software Engineer",
+      urls: [
+        {
+          icon: "web",
+          url: "baterdene.vercel.app",
+        },
+      ],
+    },
+    {
       fullname: "Э.Батгэрэл",
       title: "Senior officer",
       urls: [
