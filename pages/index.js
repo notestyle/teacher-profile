@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const profile = {
@@ -191,6 +191,31 @@ export default function Home() {
     },
   ];
 
+  const updateTheme = () => {
+    switch (localStorage.theme) {
+      case "system":
+        if (window.matchMedia("(prefers-color-scheme: dark").matches) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+        document.documentElement.setAttribute("color-theme", "system");
+        break;
+      case "dark":
+        document.documentElement.classList.add("dark");
+        document.documentElement.setAttribute("color-theme", "dark");
+        break;
+      case "light":
+        document.documentElement.classList.remove("dark");
+        document.documentElement.setAttribute("color-theme", "light");
+        break;
+    }
+  };
+
+  useEffect(() => {
+    updateTheme();
+  }, []);
+
   return (
     <>
       <Head>
@@ -200,34 +225,65 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="dark:bg-gray-800 relative bg-slate-100 h-full flex flex-col gap-4 justify-start items-center">
-        <div className="w-full sticky bg-opacity-40 backdrop-blur-lg drop-shadow-md top-0 h-20 shadow flex justify-between items-center px-4">
-          <button className="h-12 w-12 rounded-full bg-neutral-800 flex justify-center items-center">
+      <div className="dark:bg-gray-800 relative bg-slate-100 h-full flex flex-col gap-4 justify-start items-center dark:text-slate-100">
+        <div className="w-full sticky bg-opacity-40  backdrop-blur-lg drop-shadow dark:border-b dark:border-cyan-400 top-0 h-20 shadow flex justify-between items-center px-4">
+          <button className="h-12 w-12 rounded-full bg-neutral-800 dark:bg-cyan-400 flex justify-center items-center">
             <div className="font-extrabold text-slate-100 text-3xl">U</div>
           </button>
           <div className="flex items-center gap-8 text-sm">
-            <button className="bg-neutral-800 cursor-pointer hover:bg-slate-700 text-white rounded px-2 py-1">
+            <button className="bg-neutral-800 dark:bg-cyan-400 cursor-pointer hover:bg-slate-700 text-white rounded px-2 py-1">
               Нүүр
             </button>
             <button>Сургалт</button>
+            <button
+              onClick={() => {
+                localStorage.theme =
+                  localStorage.theme == "dark" ? "light" : "dark";
+                updateTheme();
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="w-5 h-5 dark:hidden"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M7.455 2.004a.75.75 0 01.26.77 7 7 0 009.958 7.967.75.75 0 011.067.853A8.5 8.5 0 116.647 1.921a.75.75 0 01.808.083z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="w-5 h-5 hidden dark:block"
+              >
+                <path d="M10 2a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 2zM10 15a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 15zM10 7a3 3 0 100 6 3 3 0 000-6zM15.657 5.404a.75.75 0 10-1.06-1.06l-1.061 1.06a.75.75 0 001.06 1.06l1.06-1.06zM6.464 14.596a.75.75 0 10-1.06-1.06l-1.06 1.06a.75.75 0 001.06 1.06l1.06-1.06zM18 10a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0118 10zM5 10a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 015 10zM14.596 15.657a.75.75 0 001.06-1.06l-1.06-1.061a.75.75 0 10-1.06 1.06l1.06 1.06zM5.404 6.464a.75.75 0 001.06-1.06l-1.06-1.06a.75.75 0 10-1.061 1.06l1.06 1.06z" />
+              </svg>
+            </button>
           </div>
         </div>
-        <div className="w-80 h-72 border border-gray-200 bg-slate-100 hover:shadow-cyan-400 rounded-md shadow-lg flex flex-col items-center py-4">
-          <div className="w-28 h-28 rounded-full shadow border flex items-center justify-center">
+        <div className="w-80 border border-gray-200 dark:border-cyan-400 bg-slate-100 hover:shadow-cyan-400 dark:shadow-cyan-400 dark:bg-gray-800 rounded-md shadow-lg flex flex-col items-center py-8">
+          <div className="w-28 h-28 rounded-full shadow border dark:border-cyan-400 flex items-center justify-center">
             <img
               className="w-24 h-24 rounded-full object-cover"
               src="uguumur.png"
+              alt="profile"
             />
           </div>
-          <div className="font-bold">{profile.fullname}</div>
+          <div className="font-bold mt-4">{profile.fullname}</div>
           <div className="font-bold">Багш</div>
-          <div className="text-sm text-gray-600">{profile.title}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-400">
+            {profile.title}
+          </div>
           <div className="flex gap-2 mt-8">
             {profile.urls.map((row, i) => (
               <a
                 key={i}
                 href={row.url}
-                className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center"
+                className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center dark:text-cyan-400 dark:border dark:border-cyan-400"
               >
                 {icons[row.icon]}
               </a>
@@ -235,38 +291,70 @@ export default function Home() {
           </div>
         </div>
         {/* Сурагчид */}
-        <div className="mt-12 font-bold text-gray-700 gap-2 flex items-center justify-center">
-          <span className="border-gray-700 rounded border p-1">Next.js</span>+
-          <span className="border-cyan-500 text-cyan-500 rounded border p-1">
-            Tailwindcss
-          </span>
+        <div className="mt-12 font-bold text-gray-700 gap-2 flex items-center justify-center flex-col md:flex-row dark:text-gray-300">
+          <div className="flex gap-2 justify-center items-center ">
+            <span className="border-gray-700 rounded border p-1 dark:bg-gray-200 dark:text-gray-800  dark:border-gray-300">
+              Next.js
+            </span>
+            +
+            <span className="border-cyan-500 text-cyan-500 rounded border p-1">
+              Tailwindcss
+            </span>
+          </div>
           <span>сургалтыг амжилттай төгссөн</span>
         </div>
         <div className=" w-[80%] flex flex-col items-center">
-          <div className="w-1 h-8 bg-gray-200 rounded-t border-t border-l border-neutral-400"></div>
-          <div className="bg-gray-200 border-l border-neutral-400 h-1 w-full rounded-t"></div>
+          <div className="w-1 h-8 bg-gray-200 rounded-t border-t border-l border-neutral-400 dark:bg-cyan-400"></div>
+          <div className="bg-gray-200 border-l border-neutral-400 h-1 w-full rounded-t dark:bg-cyan-400"></div>
           <div className="flex justify-between w-full">
-            <div className="bg-gray-200 h-8 w-1 rounded-b  border-l border-neutral-400"></div>
-            <div className="bg-gray-200 h-8 w-1 rounded-b  border-l border-neutral-400"></div>
-            <div className="bg-gray-200 h-8 w-1 rounded-b hidden md:block border-b border-x border-neutral-400"></div>
-            <div className="bg-gray-200 h-8 w-1 rounded-b hidden md:block border-b border-x border-neutral-400"></div>
+            <div className="bg-gray-200 h-8 w-1 rounded-b  border-l border-neutral-400 dark:bg-cyan-400"></div>
+            <div className="bg-gray-200 h-8 w-1 rounded-b  border-l border-neutral-400 dark:bg-cyan-400"></div>
+            <div className="bg-gray-200 h-8 w-1 rounded-b hidden md:block border-b border-l border-neutral-400 dark:bg-cyan-400"></div>
+            <div className="bg-gray-200 h-8 w-1 rounded-b hidden md:block border-b border-l border-neutral-400 dark:bg-cyan-400"></div>
           </div>
         </div>
-        <div className="w-full px-4 grid grid-cols-2 md:grid-cols-4 gap-2 mb-12">
+        <div className="w-full px-4 grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           {students.map((row, i) => (
             <div
               key={i}
-              className="w-full border border-gray-200 h-54 hover:shadow-cyan-400 bg-slate-100 rounded-md shadow-md flex flex-col items-center py-4"
+              className="w-full border border-gray-200 dark:border-cyan-400 h-54 hover:shadow-cyan-400 bg-slate-100 dark:bg-gray-800 rounded-md shadow-lg flex flex-col items-center py-8"
             >
-              <div className="w-24 h-24 rounded-full bg-neutral-800"></div>
-              <div className="font-bold">{row.fullname}</div>
-              <div className="text-sm text-gray-600">{row.title}</div>
+              <div className="w-28 h-28 rounded-full shadow border dark:border-cyan-400 flex items-center justify-center">
+                {row.img ? (
+                  <>
+                    <img
+                      className="w-24 h-24 rounded-full object-cover bg-neutral-800 flex justify-center items-center text-sx"
+                      src=""
+                      alt="]"
+                    />
+                  </>
+                ) : (
+                  <div className="bg-slate-200 dark:bg-neutral-800 h-24 w-24 rounded-full flex justify-center items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-20 h-20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                )}
+              </div>
+              <div className="font-bold mt-4">{row.fullname}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400 ">
+                {row.title}
+              </div>
               <div className="flex gap-2 mt-8">
                 {row.urls.map((link, j) => (
                   <a
                     key={j}
                     href={link.url}
-                    className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center"
+                    className="w-8 h-8 rounded bg-neutral-800 text-slate-100 flex justify-center items-center dark:text-cyan-400 dark:border dark:border-cyan-400"
                   >
                     {icons[link.icon]}
                   </a>
@@ -275,7 +363,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="h-8 bg-neutral-800 text-slate-100 w-full flex items-center justify-center text-xs">
+        <div className="h-8 bg-neutral-800 dark:bg-gray-700 text-slate-100 w-full flex items-center justify-center text-xs">
           2023 он
         </div>
       </div>
