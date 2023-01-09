@@ -182,22 +182,12 @@ export default function Home() {
     {
       fullname: "Ц.Бат-Эрдэнэ",
       title: "Software Engineer",
-      urls: [
-        {
-          icon: "web",
-          url: "baterdene.vercel.app",
-        },
-      ],
+      urls: [],
     },
     {
       fullname: "Э.Батгэрэл",
       title: "Senior officer",
-      urls: [
-        {
-          icon: "web",
-          url: "batgerel.vercel.app",
-        },
-      ],
+      urls: [],
     },
   ];
 
