@@ -81,7 +81,7 @@ export default function Home() {
       urls: [
         {
           icon: "web",
-          url: "https://temuulen.vercel.app",
+          url: "https://temka.vercel.app",
         },
         {
           icon: "email",
