@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
 import Header from "../components/header";
 
 export default function Home() {
@@ -211,7 +210,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className="dark:bg-gray-800 relative bg-slate-100 h-full flex flex-col gap-4 justify-start items-center dark:text-slate-100">
+      <div className="dark:bg-gray-800 mt-4 bg-slate-100 h-full flex flex-col gap-4 justify-start items-center dark:text-slate-100">
         <div className="w-80 border border-gray-200 dark:border-cyan-400 bg-slate-100 hover:shadow-cyan-400 dark:shadow-cyan-400 dark:bg-gray-800 rounded-md shadow-lg flex flex-col items-center py-8">
           <div className="w-28 h-28 rounded-full shadow border dark:border-cyan-400 flex items-center justify-center">
             <img
