@@ -135,7 +135,7 @@ export default function Home() {
       urls: [
         {
           icon: "web",
-          url: "urnaa.vercel.app",
+          url: "urnaa-mta.vercel.app",
         },
         {
           icon: "email",
@@ -153,7 +153,7 @@ export default function Home() {
       urls: [
         {
           icon: "web",
-          url: "tumee.vercel.app",
+          url: "tumendari.vercel.app",
         },
         {
           icon: "email",
@@ -167,7 +167,7 @@ export default function Home() {
       urls: [
         {
           icon: "web",
-          url: "ganaa.vercel.app",
+          url: "ganzorig.vercel.app",
         },
         {
           icon: "email",
