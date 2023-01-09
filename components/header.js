@@ -1,4 +1,31 @@
+import { useEffect } from "react";
+
 export default function Header() {
+  const updateTheme = () => {
+    switch (localStorage.theme) {
+      case "system":
+        if (window.matchMedia("(prefers-color-scheme: dark").matches) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+        document.documentElement.setAttribute("color-theme", "system");
+        break;
+      case "dark":
+        document.documentElement.classList.add("dark");
+        document.documentElement.setAttribute("color-theme", "dark");
+        break;
+      case "light":
+        document.documentElement.classList.remove("dark");
+        document.documentElement.setAttribute("color-theme", "light");
+        break;
+    }
+  };
+
+  useEffect(() => {
+    updateTheme();
+  }, []);
+
   return (
     <>
       <div className="w-full sticky bg-opacity-40  backdrop-blur-lg drop-shadow dark:border-b dark:border-cyan-400 top-0 h-20 shadow flex justify-between items-center px-4">
@@ -9,13 +36,13 @@ export default function Header() {
           <button className="bg-neutral-800 dark:bg-cyan-400 cursor-pointer hover:bg-slate-700 text-white rounded px-2 py-1">
             Нүүр
           </button>
-          <button>Сургалт 2</button>
+          <button>Сургалт</button>
           <button
-          // onClick={() => {
-          //   localStorage.theme =
-          //     localStorage.theme == "dark" ? "light" : "dark";
-          //   updateTheme();
-          // }}
+            onClick={() => {
+              localStorage.theme =
+                localStorage.theme == "dark" ? "light" : "dark";
+              updateTheme();
+            }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
