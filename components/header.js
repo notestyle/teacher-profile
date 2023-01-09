@@ -31,7 +31,7 @@ export default function Header() {
       <button className="h-12 w-12 rounded-full bg-neutral-800 dark:bg-cyan-400 flex justify-center items-center">
         <div className="font-extrabold text-slate-100 text-3xl">U</div>
       </button>
-      <div className="flex items-center gap-8 text-sm">
+      <div className="flex items-center gap-8 text-sm dark:text-slate-100">
         <button className="bg-neutral-800 dark:bg-cyan-400 cursor-pointer hover:bg-slate-700 text-white rounded px-2 py-1">
           Нүүр
         </button>
