@@ -81,7 +81,7 @@ export default function Home() {
       urls: [
         {
           icon: "web",
-          url: "temuulen.vercel.app",
+          url: "https://temuulen.vercel.app",
         },
         {
           icon: "email",
@@ -99,7 +99,7 @@ export default function Home() {
       urls: [
         {
           icon: "web",
-          url: "unurmaa.vercel.app",
+          url: "https://unurmaa.vercel.app",
         },
         {
           icon: "email",
@@ -117,7 +117,7 @@ export default function Home() {
       urls: [
         {
           icon: "web",
-          url: "khulguu.vercel.app",
+          url: "https://khulguu.vercel.app",
         },
         {
           icon: "email",
@@ -135,7 +135,7 @@ export default function Home() {
       urls: [
         {
           icon: "web",
-          url: "urnaa-mta.vercel.app",
+          url: "https://urnaa-mta.vercel.app",
         },
         {
           icon: "email",
@@ -153,7 +153,7 @@ export default function Home() {
       urls: [
         {
           icon: "web",
-          url: "tumendari.vercel.app",
+          url: "https://tumendari.vercel.app",
         },
         {
           icon: "email",
@@ -167,7 +167,7 @@ export default function Home() {
       urls: [
         {
           icon: "web",
-          url: "ganzorig.vercel.app",
+          url: "https://ganzorig.vercel.app",
         },
         {
           icon: "email",
