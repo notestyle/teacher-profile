@@ -84,10 +84,6 @@ export default function Home() {
           url: "temuulen.vercel.app",
         },
         {
-          icon: "fb",
-          url: "www.facebook.com/b.temuulen",
-        },
-        {
           icon: "email",
           url: "mailto:temuulen.b@mta.gov.mn",
         },
@@ -104,10 +100,6 @@ export default function Home() {
         {
           icon: "web",
           url: "unurmaa.vercel.app",
-        },
-        {
-          icon: "fb",
-          url: "www.facebook.com",
         },
         {
           icon: "email",
@@ -128,10 +120,6 @@ export default function Home() {
           url: "khulguu.vercel.app",
         },
         {
-          icon: "fb",
-          url: "www.facebook.com",
-        },
-        {
           icon: "email",
           url: "mailto:khulguu1021@gmail.com",
         },
@@ -150,10 +138,6 @@ export default function Home() {
           url: "urnaa.vercel.app",
         },
         {
-          icon: "fb",
-          url: "https://www.facebook.com/urnaa31",
-        },
-        {
           icon: "email",
           url: "mailto:uranchimeg.ya@mta.gov.mn",
         },
@@ -164,16 +148,26 @@ export default function Home() {
       ],
     },
     {
+      fullname: "О.Түмэндарь",
+      title: "Database Engineer",
+      urls: [
+        {
+          icon: "web",
+          url: "tumee.vercel.app",
+        },
+        {
+          icon: "email",
+          url: "mailto:tumendari@mta.gov.mn",
+        },
+      ],
+    },
+    {
       fullname: "У.Ганзориг",
       title: "Software Developer",
       urls: [
         {
           icon: "web",
           url: "ganaa.vercel.app",
-        },
-        {
-          icon: "fb",
-          url: "www.facebook.com/ganzorig.u",
         },
         {
           icon: "email",
@@ -192,40 +186,6 @@ export default function Home() {
         {
           icon: "web",
           url: "batgerel.vercel.app",
-        },
-        {
-          icon: "fb",
-          url: "www.facebook.com",
-        },
-        {
-          icon: "email",
-          url: "mailto:",
-        },
-        {
-          icon: "phone",
-          url: "tel:",
-        },
-      ],
-    },
-    {
-      fullname: "",
-      title: "",
-      urls: [
-        {
-          icon: "web",
-          url: "batgerel.vercel.app",
-        },
-        {
-          icon: "fb",
-          url: "www.facebook.com",
-        },
-        {
-          icon: "email",
-          url: "mailto:",
-        },
-        {
-          icon: "phone",
-          url: "tel:",
         },
       ],
     },
