@@ -1,6 +1,9 @@
-import { useEffect } from "react";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
-export default function Header() {
+export default function Header({ count, clearCount }) {
+  const router = useRouter();
+
   const updateTheme = () => {
     switch (localStorage.theme) {
       case "system":
@@ -32,10 +35,44 @@ export default function Header() {
         <div className="font-extrabold text-slate-100 text-3xl">U</div>
       </button>
       <div className="flex items-center gap-8 text-sm dark:text-slate-100">
-        <button className="bg-neutral-800 dark:bg-cyan-400 cursor-pointer hover:bg-slate-700 text-white rounded px-2 py-1">
+        <div className="relative " onClick={() => clearCount()}>
+          <div className="absolute -right-2 -bottom-2 text-slate-100 bg-cyan-400 w-5 h-5 flex justify-center items-center font-bold rounded-full">
+            {count}
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="w-6 h-6"
+          >
+            <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+          </svg>
+        </div>
+
+        <button
+          onClick={() => {
+            router.push("/");
+          }}
+          className={`${
+            router.pathname == "/"
+              ? "bg-neutral-800 dark:bg-cyan-400 hover:bg-slate-700 text-white"
+              : ""
+          }  cursor-pointer  rounded px-2 py-1`}
+        >
           Нүүр
         </button>
-        <button>Сургалт</button>
+        <button
+          className={`${
+            router.pathname == "/plan"
+              ? "bg-neutral-800 dark:bg-cyan-400 hover:bg-slate-700 text-white"
+              : ""
+          }  cursor-pointer  rounded px-2 py-1`}
+          onClick={() => {
+            router.push("/plan");
+          }}
+        >
+          Сургалт
+        </button>
         <button
           onClick={() => {
             localStorage.theme =

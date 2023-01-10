@@ -114,6 +114,7 @@ export default function Home() {
     {
       fullname: "Т.Ганхөлөг",
       title: "Database Engineer",
+      img: "https://khulguu.vercel.app/propic.jpeg",
       urls: [
         {
           icon: "web",
@@ -132,6 +133,7 @@ export default function Home() {
     {
       fullname: "Я.Уранчимэг",
       title: "Software Developer",
+      img: "https://urnaa-mta.vercel.app/62.jpg",
       urls: [
         {
           icon: "web",
@@ -150,6 +152,7 @@ export default function Home() {
     {
       fullname: "О.Түмэндарь",
       title: "Database Engineer",
+      img: "https://tumendari.vercel.app/wo.jpg",
       urls: [
         {
           icon: "web",
@@ -260,8 +263,8 @@ export default function Home() {
                   <>
                     <img
                       className="w-24 h-24 rounded-full object-cover bg-neutral-800 flex justify-center items-center text-sx"
-                      src=""
-                      alt="]"
+                      src={row.img}
+                      alt="img"
                     />
                   </>
                 ) : (
