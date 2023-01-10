@@ -47,8 +47,11 @@ export default function Test() {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 w-full p-8 gap-4">
-        {users.map((row) => (
-          <div className="h-40 bg-orange-300 rounded flex px-2 w-full items-center gap-4">
+        {users.map((row, i) => (
+          <div
+            key={i}
+            className="h-40 bg-orange-300 rounded flex px-2 w-full items-center gap-4"
+          >
             <img src={row.avatar} className="w-20 h-20 rounded" />
             <div>
               <div>email: {row.email}</div>
