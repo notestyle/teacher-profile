@@ -2,53 +2,8 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
 export default function Test() {
-  const [fact, setFact] = useState({});
   const [users, setUsers] = useState([]);
-
-  const data = [
-    {
-      id: 7,
-      email: "michael.lawson@reqres.in",
-      first_name: "Michael",
-      last_name: "Lawson",
-      avatar: "https://reqres.in/img/faces/7-image.jpg",
-    },
-    {
-      id: 8,
-      email: "lindsay.ferguson@reqres.in",
-      first_name: "Lindsay",
-      last_name: "Ferguson",
-      avatar: "https://reqres.in/img/faces/8-image.jpg",
-    },
-    {
-      id: 9,
-      email: "tobias.funke@reqres.in",
-      first_name: "Tobias",
-      last_name: "Funke",
-      avatar: "https://reqres.in/img/faces/9-image.jpg",
-    },
-    {
-      id: 10,
-      email: "byron.fields@reqres.in",
-      first_name: "Byron",
-      last_name: "Fields",
-      avatar: "https://reqres.in/img/faces/10-image.jpg",
-    },
-    {
-      id: 11,
-      email: "george.edwards@reqres.in",
-      first_name: "George",
-      last_name: "Edwards",
-      avatar: "https://reqres.in/img/faces/11-image.jpg",
-    },
-    {
-      id: 12,
-      email: "rachel.howell@reqres.in",
-      first_name: "Rachel",
-      last_name: "Howell",
-      avatar: "https://reqres.in/img/faces/12-image.jpg",
-    },
-  ];
+  const [page, setPage] = useState(1);
 
   const createUser = () => {
     fetch("https://reqres.in/api/users", {
@@ -72,10 +27,10 @@ export default function Test() {
     //   .then((json) => setFact(json))
     //   .catch((err) => console.log("dsf", err));
 
-    fetch("https://reqres.in/api/users?page=1")
+    fetch(`https://reqres.in/api/users?page=${page}`)
       .then((response) => response.json())
       .then((json) => setUsers(json.data));
-  }, []);
+  }, [page]);
 
   return (
     <>
@@ -91,10 +46,10 @@ export default function Test() {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-3 w-full p-8 gap-4">
-        {data.map((row) => (
-          <div className="h-40 bg-orange-300 rounded flex px-4 items-center gap-4">
-            <img src={row.avatar} className="w-32 h-32 rounded" />
+      <div className="grid grid-cols-1 md:grid-cols-3 w-full p-8 gap-4">
+        {users.map((row) => (
+          <div className="h-40 bg-orange-300 rounded flex px-2 w-full items-center gap-4">
+            <img src={row.avatar} className="w-20 h-20 rounded" />
             <div>
               <div>email: {row.email}</div>
               <div>firstname: {row.first_name}</div>
@@ -102,6 +57,47 @@ export default function Test() {
             </div>
           </div>
         ))}
+      </div>
+      <div className="w-full flex justify-center mb-4 gap-4">
+        <button
+          onClick={() => setPage(page - 1)}
+          className="w-8 h-8 flex items-center justify-center bg-orange-400 rounded text-slate-100"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15.75 19.5L8.25 12l7.5-7.5"
+            />
+          </svg>
+        </button>
+        {page}
+        <button
+          onClick={() => setPage(page + 1)}
+          className="w-8 h-8 flex items-center justify-center bg-orange-400 rounded text-slate-100"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </button>
       </div>
     </>
   );

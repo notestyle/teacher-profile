@@ -35,7 +35,11 @@ export default function Header({ count, clearCount }) {
         <div className="font-extrabold text-slate-100 text-3xl">U</div>
       </button>
       <div className="flex items-center gap-8 text-sm dark:text-slate-100">
-        <div className="relative " onClick={() => clearCount()}>
+        <div
+          hidden={!count && count != 0}
+          className="relative "
+          onClick={() => clearCount()}
+        >
           <div className="absolute -right-2 -bottom-2 text-slate-100 bg-cyan-400 w-5 h-5 flex justify-center items-center font-bold rounded-full">
             {count}
           </div>
