@@ -22,6 +22,8 @@ export default function Header({ count, clearCount }) {
         document.documentElement.classList.remove("dark");
         document.documentElement.setAttribute("color-theme", "light");
         break;
+      default:
+        localStorage.theme = "dark";
     }
   };
 
